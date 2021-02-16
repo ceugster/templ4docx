@@ -35,7 +35,7 @@ public class TestTemplateAfterMSOfficeEdit extends AbstractMetaTest {
         docx.setVariablePattern(new VariablePattern("${", "}"));
 
         Variables var = new Variables();
-        var.addTextVariable(new TextVariable("${var01}", "valueAfterEditInMSOffice01"));
+        var.addTextVariable(new TextVariable("${var01}", "value\nAfter\nEdit\nIn\nMSOffice01"));
         var.addTextVariable(new TextVariable("${var02}", "valueAfterEditInMSOffice02"));
         var.addTextVariable(new TextVariable("${var03}", "valueAfterEditInMSOffice03"));
 
@@ -48,8 +48,9 @@ public class TestTemplateAfterMSOfficeEdit extends AbstractMetaTest {
         docx.save(processedPath);
 
         text = docx.readTextContent();
+        System.out.println(processedPath);
         assertEquals(
-                "This is test simple edited template with three variables: valueAfterEditInMSOffice01, valueAfterEditInMSOffice02, valueAfterEditInMSOffice03. File edited in MS Office.",
+                "This is test simple edited template with three variables: value\nAfter\nEdit\nIn\nMSOffice01, valueAfterEditInMSOffice02, valueAfterEditInMSOffice03. File edited in MS Office.",
                 text.trim());
 
         is.close();
