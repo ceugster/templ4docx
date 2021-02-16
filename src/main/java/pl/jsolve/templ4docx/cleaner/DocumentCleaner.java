@@ -45,9 +45,9 @@ public class DocumentCleaner {
 
     /**
      * Clean content of tables. This method is invoked recursively for each table
-     * @param tables
-     * @param keys
-     * @param variablePattern
+     * @param tables tables
+     * @param keys keys
+     * @param variablePattern variable pattern
      */
     private void cleanTables(List<XWPFTable> tables, List<Key> keys, VariablePattern variablePattern) {
         for (XWPFTable table : tables) {
@@ -67,9 +67,9 @@ public class DocumentCleaner {
     /**
      * Clean list of XWPFRun. If one variable is split between many XWPFRun, this method will move this variable to run
      * where variable begins. The text from other XWPFRuns which contain parts of found variable is cleaned.
-     * @param runs
-     * @param keys
-     * @param variablePattern
+     * @param runs runs
+     * @param keys keys
+     * @param variablePattern variable pattern
      */
     private void clean(List<XWPFRun> runs, List<Key> keys, VariablePattern variablePattern) {
         if (runs == null || runs.isEmpty() || runs.size() == 1) {
@@ -127,8 +127,8 @@ public class DocumentCleaner {
     }
 
     /**
-     * @param keys
-     * @param textContent
+     * @param keys keys
+     * @param textContent text content
      * @return boolean which will indicate, if given string contains any key from list
      */
     private boolean containsKey(List<Key> keys, String textContent) {
@@ -141,7 +141,7 @@ public class DocumentCleaner {
     }
 
     /**
-     * @param prefix
+     * @param prefix prefix
      * @return Escaped first char. If string starts with \, the second char will be also included in returned string
      */
     private String getFirstChar(String prefix) {

@@ -17,8 +17,8 @@ public class VariablesExtractor {
 
     /**
      * Main method responsible for extract all variables which satisfy given variable pattern.
-     * @param content
-     * @param variablePattern
+     * @param content content
+     * @param variablePattern variable pattern
      * @return List of found variables
      */
     public List<String> extract(String content, VariablePattern variablePattern) {
@@ -44,7 +44,7 @@ public class VariablesExtractor {
     /**
      * Return first char. If the first char is \ it will mean that char is escaped, so the second char is added to
      * result
-     * @param prefix
+     * @param prefix prefix
      * @return First escaped char
      */
     private String getFirstChar(String prefix) {

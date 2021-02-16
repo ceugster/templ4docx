@@ -20,9 +20,9 @@ public class ReflectionHelper {
     /**
      * Set a {@code field} to a {@code value} of an entity {@code object}
      *
-     * @param object
-     * @param field
-     * @param value
+     * @param object object
+     * @param field field
+     * @param value value
      */
     public static void setFieldValue(Object object, Field field, Object value) {
         try {
@@ -39,9 +39,9 @@ public class ReflectionHelper {
      * Trying set a {@code field} to a {@code value} of an entity {@code object} by using a setter method. If setter not
      * found, field will be set directly throw {@code setFieldValue} method.
      *
-     * @param object
-     * @param field
-     * @param value
+     * @param object object
+     * @param field field
+     * @param value value
      */
     public static void setFieldValueBySetter(Object object, Field field, Object value) {
         try {
@@ -71,11 +71,9 @@ public class ReflectionHelper {
     }
 
     /**
-     * @param object
-     * @param field
+     * @param object object
+     * @param field field
      * @return the field value of an object
-     * @throws IllegalAccessException
-     * @throws IllegalArgumentException
      */
     public static Object getFieldValue(Object object, Field field) {
         try {
@@ -90,11 +88,9 @@ public class ReflectionHelper {
     }
 
     /**
-     * @param object
-     * @param field
+     * @param object object
+     * @param field field
      * @return the field value of an object
-     * @throws IllegalAccessException
-     * @throws IllegalArgumentException
      */
     public static Object getFieldValue(Object object, String fieldName) {
         Collection<Field> fields = getFields(object);
@@ -106,7 +102,7 @@ public class ReflectionHelper {
     }
 
     /**
-     * @param obj
+     * @param obj object
      * @return all object fields, including inherited
      */
     public static Collection<Field> getFields(Object obj) {
@@ -128,7 +124,7 @@ public class ReflectionHelper {
     }
 
     /**
-     * @param obj
+     * @param obj object
      * @return all object fields, including inherited
      */
     public static Collection<Field> getFieldsStatic(Object obj) {
@@ -162,7 +158,7 @@ public class ReflectionHelper {
     }
 
     /**
-     * @param obj
+     * @param obj object
      * @return all object methods, including inherited
      */
     public static Collection<Method> getMethods(Object obj) {
@@ -184,7 +180,7 @@ public class ReflectionHelper {
     }
 
     /**
-     * @param obj
+     * @param obj object
      * @return all object methods, including inherited
      */
     public static Collection<Method> getMethodsStatic(Object obj) {
