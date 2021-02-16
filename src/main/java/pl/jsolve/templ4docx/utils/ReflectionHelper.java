@@ -89,7 +89,7 @@ public class ReflectionHelper {
 
     /**
      * @param object object
-     * @param field field
+     * @param fieldName field name
      * @return the field value of an object
      */
     public static Object getFieldValue(Object object, String fieldName) {

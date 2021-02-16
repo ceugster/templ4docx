@@ -683,7 +683,7 @@ public class DocumentMetaProcessor {
      * @param bookmarkStart bookmark start
      * @param bookmarkEnd bookmark end
      * @param keysHolder keys holder
-     * @return
+     * @return decoded variable name
      */
     protected String getDecodedVarName(CTBookmark bookmarkStart, CTMarkupRange bookmarkEnd, KeysHolder keysHolder) {
         if (bookmarkStart == null)
